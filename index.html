@@ -7,6 +7,29 @@
   <title>HTML Tables</title>
 </head>
 <body>
+  
+  <table>
+  <tr>
+    <th>City</th>
+    <th>State</th>
+    <th>Bringing</th>
+  </tr>
+  <tr>
+    <td>Daniel</td>
+    <td>718-555-1212</td>
+    <td>Guacamole</td>
+  </tr>
+  <tr>
+    <td>Rachel</td>
+    <td>718-555-1212</td>
+    <td>Chips</td>
+  </tr>
+  <tr>
+    <td>Terrance</td>
+    <td>914-555-1212</td>
+    <td>Salsa</td>
+  </tr>
+</table>
   it 'contains a <table> with the correct headers' do
     headers = parsed_html.search('table > tr').first
 
