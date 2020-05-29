@@ -30,9 +30,10 @@
     <td>2,716,450</td>
   </tr>
   <tr>
-    <td>Chicago</td>
-    <td>Illinois</td>
-    <td>2,716,450</td>
+    <td>Houston</td>
+    <td>Texas</td>
+    <td>2,312,717</td>
+
   </tr>
 </table>
 
@@ -42,15 +43,6 @@
 
 
 
-  it 'contains the correct information about Houston' do
-    new_york = parsed_html.search('table > tr')[4]
-
-    expect(new_york.children[0].children[0].text).to eq("Houston")
-    expect(new_york.children[2].children[0].text).to eq("Texas")
-    expect(new_york.children[4].children[0].text).to be == "2,312,717"
-  end
-
-end
 
 
   <!-- Write your HTML here -->
