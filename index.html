@@ -12,17 +12,17 @@
   <tr>
     <th>City</th>
     <th>State</th>
-    <th>Bringing</th>
+    <th>2017 estimate</th>
   </tr>
   <tr>
-    <td>Daniel</td>
-    <td>718-555-1212</td>
-    <td>Guacamole</td>
+    <td>New York</td>
+    <td>New York</td>
+    <td>8,622,698</td>
   </tr>
   <tr>
-    <td>Rachel</td>
-    <td>718-555-1212</td>
-    <td>Chips</td>
+    <td>Los Angeles</td>
+    <td>California</td>
+    <td>"3,999,759</td>
   </tr>
   <tr>
     <td>Terrance</td>
@@ -30,29 +30,11 @@
     <td>Salsa</td>
   </tr>
 </table>
-  it 'contains a <table> with the correct headers' do
-    headers = parsed_html.search('table > tr').first
 
-    expect(headers.children[0].children[0].text).to eq("City")
-    expect(headers.children[2].children[0].text).to eq("State")
-    expect(headers.children[4].children[0].text).to eq("2017 estimate")
-  end
 
-  it 'contains the correct information about New York City' do
-    new_york = parsed_html.search('table > tr')[1]
 
-    expect(new_york.children[0].children[0].text).to eq("New York")
-    expect(new_york.children[2].children[0].text).to eq("New York")
-    expect(new_york.children[4].children[0].text).to be == "8,622,698"
-  end
 
-  it 'contains the correct information about California' do
-    new_york = parsed_html.search('table > tr')[2]
 
-    expect(new_york.children[0].children[0].text).to eq("Los Angeles")
-    expect(new_york.children[2].children[0].text).to eq("California")
-    expect(new_york.children[4].children[0].text).to be == "3,999,759"
-  end
 
   it 'contains the correct information about Chicago' do
     new_york = parsed_html.search('table > tr')[3]
